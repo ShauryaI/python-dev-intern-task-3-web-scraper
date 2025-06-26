@@ -26,3 +26,18 @@ We need to install requests and beautifulsoup4 for this. Requests for handling H
     - For saving the headlines in a file, a nomenclature has been followed.
     - TOI_current-datetime.text as scraping can be routine task.
     - While creating file, we will explicitly define the encoding to fix the UnicodeEncodeError
+
+## Why use Selenium ##
+For websites like https://www.reuters.com/world/india/
+Reuters has a special anti-bot solution (or requiring JavaScript execution) that blocks all requests not coming from a browser.
+Should get error: Please enable JS and disable any ad blocker
+But got: HTTP Error: 401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/india/
+
+Let's try using a browser automation tool like Selenium to scrape news articles from Reuters.
+Run command
+>>> pip install selenium
+
+When code is executed it opens a Chrome browser with message
+Chrome is being controlled by automated test software
+
+Logic same but different library and scraping worked.
